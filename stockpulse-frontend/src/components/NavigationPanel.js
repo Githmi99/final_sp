@@ -10,12 +10,13 @@ import {
   FaChartLine,
 } from 'react-icons/fa';
 import './NavigationPanel.css';
+import Cookie from 'js-cookie';
 
 const NavigationPanel = () => {
   const navigate = useNavigate();
 
   // Fetch the user role from local storage (or replace this with your own logic)
-  const userRole = localStorage.getItem('role'); // Assuming role is stored as 'role' in local storage
+  const userRole = Cookie.get('role'); // Assuming role is stored as 'role' in local storage
 
   const goToLogin = () => {
     navigate('/');
