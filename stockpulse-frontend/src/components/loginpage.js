@@ -63,6 +63,7 @@ const LoginPage = () => {
                 <Form.Control
                   type='email'
                   placeholder='Example@email.com'
+                  name='email'
                   value={formData.email} // Bind the email value from state
                   onChange={handleChange} // Update state on change
                 />
@@ -73,6 +74,7 @@ const LoginPage = () => {
                 <Form.Control
                   type='password'
                   placeholder='At least 8 characters'
+                  name='password'
                   value={formData.password} // Bind the password value from state
                   onChange={handleChange} // Update state on change
                 />
