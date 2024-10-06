@@ -36,7 +36,7 @@ const RegisterForm = () => {
         alert(response.data);
         return;
       }
-      navigate('/dashboard'); // Redirect to dashboard on success
+      navigate('/'); // Redirect to dashboard on success
     } catch (error) {
       console.error(
         'Error registering user:',
