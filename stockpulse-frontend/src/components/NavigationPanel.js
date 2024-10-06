@@ -34,7 +34,7 @@ const NavigationPanel = () => {
       'analytics',
       'settings',
     ],
-    stockManager: ['components', 'lowstocks', 'purchases', 'lending'],
+    'stock manager': ['components', 'lowstocks', 'purchases', 'lending'],
     user: ['components', 'purchases', 'bom-ordering'],
     intern: ['components', 'purchases'],
     executive: [
