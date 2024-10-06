@@ -60,7 +60,12 @@ const LoginPage = () => {
             <Form>
               <Form.Group controlId='formEmail'>
                 <Form.Label>Email</Form.Label>
-                <Form.Control type='email' placeholder='Example@email.com' />
+                <Form.Control
+                  type='email'
+                  placeholder='Example@email.com'
+                  value={formData.email} // Bind the email value from state
+                  onChange={handleChange} // Update state on change
+                />
               </Form.Group>
 
               <Form.Group controlId='formPassword'>
@@ -68,6 +73,8 @@ const LoginPage = () => {
                 <Form.Control
                   type='password'
                   placeholder='At least 8 characters'
+                  value={formData.password} // Bind the password value from state
+                  onChange={handleChange} // Update state on change
                 />
                 <Form.Text className='text-muted'>
                   <p>Forgot Password?</p>
