@@ -44,6 +44,20 @@ const AddPurchase = ({ onClose }) => {
       return;
     }
 
+    if (role === 'stock manager' && parseFloat(cost) > 5000) {
+      alert(
+        'Executives cannot make purchases over 10,000. Please request an admin.'
+      );
+      return;
+    }
+
+    if (role === 'user' && parseFloat(cost) > 5000) {
+      alert(
+        'Executives cannot make purchases over 10,000. Please request an admin.'
+      );
+      return;
+    }
+
     try {
       await addPurchase(newPurchase).unwrap();
       alert('Purchase added successfully!');
