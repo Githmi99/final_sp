@@ -17,7 +17,8 @@ router.post('/register', async (req, res) => {
     user = new User({
       name,
       email,
-      password
+      password,
+      role: 'intern',
     });
 
     await user.save();
@@ -45,8 +46,9 @@ router.post('/login', async (req, res) => {
 
     const payload = {
       user: {
-        id: user.id
-      }
+        id: user.id,
+        role: user.role,
+      },
     };
 
     jwt.sign(
