@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { jwt_decode } from 'jwt-decode';
+import { jwt_decode, jwtDecode } from 'jwt-decode';
 
 const API_URL = 'http://localhost:3001/api';
 
@@ -22,7 +22,7 @@ export const login = async (formData) => {
 
     // Save token and role in cookies
     const { token } = response.data;
-    const decodedToken = jwt_decode(token);
+    const decodedToken = jwtDecode(token);
 
     const userRole = decodedToken?.user?.role;
 

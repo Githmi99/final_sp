@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './AddPurchase.css';
 import Header from './Header';
 import { useAddPurchaseMutation } from '../services/api';
-import { getCookie } from 'js-cookie';
+import Cookies from 'js-cookie';
 
 const AddPurchase = ({ onClose }) => {
   const [product, setProduct] = useState('');
