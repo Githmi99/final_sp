@@ -120,6 +120,8 @@ const RegisterForm = () => {
                 <option value='intern'>Intern</option>
                 <option value='admin'>Admin</option>
                 <option value='executive'>Executive</option>
+                <option value='user'>Executive</option>
+                <option value='stock manager'>Executive</option>
               </select>
             </div>
             <div className='form-group'>

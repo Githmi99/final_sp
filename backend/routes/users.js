@@ -21,6 +21,8 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
+    console.log(req.body);
+
     const { email, password, name, role } = req.body;
 
     try {
