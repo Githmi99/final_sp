@@ -9,7 +9,7 @@ const User = require('./models/User');
 const lendingRoutes = require('./routes/lendingRoutes'); // Add lending routes
 const app = express();
 const lowStockRoutes = require('./routes/lowStocks');
-const bomRoutes = require('./routes/bomRoutes'); 
+const bomRoutes = require('./routes/bomRoutes');
 const addRequestRoute = require('./routes/addRequestRoute');
 
 app.use(bodyParser.json());
@@ -23,7 +23,7 @@ app.use('/api/lendings', lendingRoutes); // Use lending routes
 app.use('/api', bomRoutes);
 app.use('/api', addRequestRoute);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });

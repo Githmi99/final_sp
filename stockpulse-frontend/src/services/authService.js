@@ -24,8 +24,15 @@ export const login = async (formData) => {
     const { token } = response.data;
     const decodedToken = jwt_decode(token);
 
+    const userRole = decodedToken?.user?.role;
+
+    if (!userRole) {
+      alert('User role is not defined. Please contact admin.');
+      return;
+    }
+
     Cookies.set('token', token, { expires: 1 }); // Token expires in 1 day
-    Cookies.set('role', decodedToken.user.role, { expires: 1 });
+    Cookies.set('role', userRole, { expires: 1 });
 
     return response.data;
   } catch (error) {
