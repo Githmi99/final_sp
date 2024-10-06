@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const appApi = createApi({
   reducerPath: 'appApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api', // Ensure this base URL points to your backend server
+    baseUrl: process.env.REACT_APP_API_BASE_URL || 'http://localhost:3001/api', // Ensure this base URL points to your backend server
     prepareHeaders: (headers) => {
       // Optionally add headers like authorization tokens
       const token = localStorage.getItem('token'); // Example for JWT
