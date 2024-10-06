@@ -23,8 +23,10 @@ export const login = async (formData) => {
     // Save token and role in cookies
     const { token } = response.data;
     const decodedToken = jwtDecode(token);
+    console.log(decodedToken);
 
     const userRole = decodedToken?.user?.role;
+    console.log(userRole);
 
     if (!userRole) {
       alert('User role is not defined. Please contact admin.');
