@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import jwt_decode from 'jwt-decode';
+import { jwt_decode } from 'jwt-decode';
 
 const API_URL = 'http://localhost:3001/api';
 
